@@ -8,11 +8,10 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
-listArray = [];
-ingredients.forEach((item) => {
+
+const listArray = ingredients.map((item) => {
   const listItem = document.createElement("li");
   listItem.textContent = item;
-  listArray.push(listItem);
+  return listItem;
 });
-
 list.prepend(...listArray);

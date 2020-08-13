@@ -18,16 +18,13 @@ const images = [
   },
 ];
 
-listArray = [];
-
-images.forEach((item) => {
+const listArray = images.map((item) => {
   const listItem = document.createElement("li");
-
   listItem.insertAdjacentHTML(
     "afterbegin",
     `<img src="${item.url}" alt="${item.alt}">`
   );
-  listArray.push(listItem);
+  return listItem;
 });
 
 list.prepend(...listArray);
